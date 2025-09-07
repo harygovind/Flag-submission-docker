@@ -6,4 +6,4 @@ FROM php:8.3-apache
 RUN docker-php-ext-install pdo pdo_pgsql
 
 # Copy the *contents* of your "allinone" folder into the web server's public directory.
-COPY allinone/ /var/www/html/
+COPY . /var/www/html/
