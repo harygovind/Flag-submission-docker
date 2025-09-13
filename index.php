@@ -399,7 +399,7 @@ switch ($page) {
         if ($_SERVER["REQUEST_METHOD"] != "POST") { header("location: ?page=dashboard"); exit; }
 
         $special_flags = ['flag_3' => '{{R7tQ4mPz!kV0eN1jW5}}', 'flag_4' => '{{aQ4sW6&eDcFvRtGyH}}'];
-        $special_messages = ['flag_3' => 'creds=username:password', 'flag_4' => ['line1' => 'you can connect it with rdp', 'line2' => 'Don\'t bruteforce']];
+        $special_messages = ['flag_3' => ['line1' => 'creds=raphaeladrean:nokkiirnno@123', 'line2' => '51.20.53.222'], 'flag_4' => ['line1' => '16.171.142.5', 'line2' => 'calicore']];
         
         $submitted_flag = trim($_POST['flag']);
         $user_id = $_SESSION['user_id'];
