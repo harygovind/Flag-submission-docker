@@ -80,7 +80,8 @@ function render_footer() {
             echo '<div class="persistent-hints-container">';
             echo '<h4>Revealed Information</h4>';
             if (isset($_SESSION['persistent_messages']['flag_3'])) {
-                echo '<p class="milestone-hint">' . htmlspecialchars($_SESSION['persistent_messages']['flag_3']) . '</p>';
+                echo '<p class="milestone-hint">' . htmlspecialchars($_SESSION['persistent_messages']['flag_3']['line1']) . '</p>';
+                echo '<p class="milestone-hint">' . htmlspecialchars($_SESSION['persistent_messages']['flag_3']['line2']) . '</p>';
             }
             if (isset($_SESSION['persistent_messages']['flag_4'])) {
                 echo '<p class="milestone-hint">' . htmlspecialchars($_SESSION['persistent_messages']['flag_4']['line1']) . '</p>';
