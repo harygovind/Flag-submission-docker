@@ -50,7 +50,7 @@ function render_header($page_title = 'CTF Platform') {
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title><?php echo htmlspecialchars($page_title) . ' - Calicore CTF'; ?></title>
+        <title><?php echo htmlspecialchars($page_title) . ' - CTF'; ?></title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -171,7 +171,7 @@ switch ($page) {
         
         render_header($page_title);
         ?>
-        <h2>Calicore CTF</h2>
+        <h2>CTF</h2>
         <p>Please enter your credentials to continue.</p>
         <?php if (!empty($message)): ?>
             <div class="message <?php echo $message_class; ?> show"><?php echo htmlspecialchars($message); ?></div>
@@ -400,7 +400,7 @@ switch ($page) {
         if ($_SERVER["REQUEST_METHOD"] != "POST") { header("location: ?page=dashboard"); exit; }
 
         $special_flags = ['flag_3' => '{{R7tQ4mPz!kV0eN1jW5}}', 'flag_4' => '{{aQ4sW6&eDcFvRtGyH}}'];
-        $special_messages = ['flag_3' => ['line1' => 'creds=raphaeladrean:nokkiirnno@123', 'line2' => '16.171.5.187'], 'flag_4' => ['line1' => '16.171.142.5', 'line2' => 'calicore']];
+        $special_messages = ['flag_3' => ['line1' => 'creds=username:password', 'line2' => '<ip>'], 'flag_4' => ['line1' => '<ip>', 'line2' => 'hint']];
         
         $submitted_flag = trim($_POST['flag']);
         $user_id = $_SESSION['user_id'];
